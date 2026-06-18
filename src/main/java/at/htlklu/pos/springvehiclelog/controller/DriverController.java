@@ -23,7 +23,6 @@ public class DriverController {
     @GetMapping("/")
     public ModelAndView getAllDrivers() {
         List<Driver> drivers = driverRepository.findAll();
-
         ModelAndView modelAndView = new ModelAndView("driver.index");
         modelAndView.addObject("drivers", drivers);
         return modelAndView;
