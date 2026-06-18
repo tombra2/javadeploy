@@ -1,0 +1,13 @@
+package at.htlklu.pos.springvehiclelog;
+
+import org.junit.jupiter.api.Test;
+import org.springframework.boot.test.context.SpringBootTest;
+
+@SpringBootTest
+class SpringvehiclelogApplicationTests {
+
+	@Test
+	void contextLoads() {
+	}
+
+}

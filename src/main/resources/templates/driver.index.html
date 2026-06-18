@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Driver</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+</head>
+<body>
+<h1>List of all Drivers</h1>
+<table>
+    <thead>
+    <tr>Firstname</tr>
+    <tr>Lastname</tr>
+    <tr>Date of Birth</tr>
+    </thead>
+    <tbody>
+    <tr th:each="driver : ${drivers}">
+        <td th:text="${driver.firstName}"></td>
+        <td th:text="${driver.lastName}"></td>
+        <td th:text="${#temporals.format(driver.birthDate,'dd.MM.yy')}"></td>
+    </tr>
+    </tbody>
+</table>
+</body>
+</html>
